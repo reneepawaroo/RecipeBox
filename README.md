@@ -5,11 +5,11 @@ This is a website designed to give you the best recipes for the few ingredients 
 
 There are also handy filters to make sure your search results meet your dietary restrictions (e.g. vegetarian, gluten free, vegan) and meal type (e.g. Breakfast, Lunch, Dinner, Dessert).
 
+Wireframe: 
+https://projects.invisionapp.com/freehand/document/LVrQsZ0fm
+
 APIs:
 
 Spoonacular Food API: https://spoonacular.com/food-api
 
 Edamam API: https://developer.edamam.com/
-
-Wireframe: 
-https://projects.invisionapp.com/freehand/document/LVrQsZ0fm
