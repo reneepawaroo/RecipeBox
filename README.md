@@ -1,9 +1,9 @@
 # Ingredientswebsite
 Plug in your top ingredients and get food inspiration
 
-This is a website designed to give you the best recipes to take care of your cravings. Suppose you really liked apples and wanted to make something with those as the main star of the dish, but you want some ideas. Sure you can search Google and probably then browse multiple websites. That takes time. Instead wouldn't it be better to plug in "apples" into a search and have the recipes pop up where apples are the key ingredient. 
+This is a website designed to give you the best recipes for the few ingredients you want to highlight. It works where you plug in up to 3 ingredients in a search and it will bring up the best recipes where those ingredients are the key ingredients of the dish. For example, suppose you love apples and want to make a dish that highlights them, you can use this site to search "apples" and the top recipes for apple dishes will pop up on cards below. 
 
-There are also handy filters to make sure your search results meet your dietary restrictions and meal type (ie. Breakfast, Lunch, Dinner, Dessert).
+There are also handy filters to make sure your search results meet your dietary restrictions and meal type (Breakfast, Lunch, Dinner, Dessert).
 
 APIs:
 
