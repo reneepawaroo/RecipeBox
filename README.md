@@ -8,6 +8,7 @@ There are also handy filters to make sure your search results meet your dietary 
 APIs:
 
 Spoonacular Food API: https://spoonacular.com/food-api
+
 Edamam API: https://developer.edamam.com/
 
 https://projects.invisionapp.com/freehand/document/LVrQsZ0fm
