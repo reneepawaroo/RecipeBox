@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Recipe Box</title>
+	<meta name="author" content="Renee Pawaroo">
+	<!-- <meta name="keywords" content="HTML,CSS,XML,JavaScript"> -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="styles/app.css">
+	<link rel="shortcut icon" href="assets/cube-black.png" type="image/x-icon"/>
+</head>
+
+<body>
+	<header class="row header">
+		<div class="left-navigation">	
+			<div class="logo">
+				<img src="assets/cube-black.png" alt="logo" style="width:30px; height:30px;" >
+			</div>
+			<div class="logo-text">Recipe Box</div>
+		</div>
+		<div class="right-navigation">
+			<nav>
+				<a class="nav-link" href="#">Home</a>
+				<a class="nav-link" href="#">About</a>
+				<a class="nav-link" href="#">Contact Us</a>
+			</nav>
+		</div>
+	</header>
+
+<!-- changing title top -->
+	<div class="row slideshow-container">
+		<div class="overlay">
+			<h1 class="centered-text">What will you make?</h1>
+		</div>
+
+		<!-- <div class="image first-img fade">
+	  	</div>
+
+	 	<div class="image second-img fade">
+	 	</div>
+
+	 	<div class="image third-img fade">
+	 	</div> -->
+	</div>
+
+<!-- filters -->
+	<section class="row data-input">
+		<article class="filters">
+			<h1 class="article-title">Preferences</h1>
+			<div class="checkbox-col">
+				<div class="checkbox-container">
+				<p class="article-regtext">Do you eat...?</p>
+					<label class="container">Vegetarian
+					  <input type="checkbox" checked="checked">
+					  <span class="checkmark"></span>
+					</label>
+					<label class="container">Vegan
+					  <input type="checkbox">
+					  <span class="checkmark"></span>
+					</label>
+					<label class="container">Pescatarian
+					  <input type="checkbox">
+					  <span class="checkmark"></span>
+					</label>
+					<label class="container">Gluten Free
+					  <input type="checkbox">
+					  <span class="checkmark"></span>
+					</label>
+				</div>	
+
+				<div class="checkbox-container">
+				<p class="article-regtext">Allergies?</p>
+					<label class="container">Nuts
+					  <input type="checkbox" checked="checked">
+					  <span class="checkmark"></span>
+					</label>
+					<label class="container">Milk
+					  <input type="checkbox">
+					  <span class="checkmark"></span>
+					</label>
+					<label class="container">Shellfish
+					  <input type="checkbox">
+					  <span class="checkmark"></span>
+					</label>
+				</div>
+			</div>
+		</article>
+
+
+		<article class="search">
+			<h1 class="article-title">Ingredients</h1>
+			<p class="article-regtext">Put your top ingredient or ingredients in the boxes. We will find you some recipe inspiration!</p>
+				<div class="search-container">
+					<form>
+						<input class="search-box" type="text" name="first-ingredient" placeholder="first ingredient">
+					</form>
+
+					<form>
+						<input class="search-box" type="text" name="second-ingredient" placeholder="second ingredient">
+					</form>
+
+					<form>
+						<input class="search-box" type="text" name="third-ingredient" placeholder="third ingredient">
+					</form>
+
+					 <div class="submit-button">
+					 	<input type="submit" value="Submit">
+  					</form>
+  					</div>
+				</div>
+		</article>
+
+	</section>
+
+<!-- cards section -->
+	<section class="recipe-header-bar article-title">Recipes</section>
+	<section class="row cards-section">
+		<div class="col">
+			<div class="card">
+				<img src="assets/egg.jpg" alt="Recipe">
+				<div class="card-body">
+					<h5 class="card-title">Title</h5>
+					<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				</div>
+			</div>
+		</div>
+		<div class="col">
+			<div class="card">
+				<img src="assets/salad.jpg" alt="Recipe">
+				<div class="card-body">
+					<h5 class="card-title">Title</h5>
+					<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				</div>
+			</div>
+		</div>
+		<div class="col">
+			<div class="card">
+				<img src="assets/italian.jpg" alt="Recipe">
+				<div class="card-body">
+					<h5 class="card-title">Title</h5>
+					<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+				</div>
+			</div>
+		</div>
+		<div class="col">
+			<div class="card">
+				<img src="assets/bbq.jpg" alt="Recipe">
+				<div class="card-body">
+					<h5 class="card-title">Title
+					</h5>
+					<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer class="row footer">
+		<div class="left-footer">© 2018 Renee Pawaroo</div>
+		<div class="right-footer">
+			<a href="https://www.linkedin.com/in/renee-pawaroo/" target="_blank"><img src="assets/linkedin-icon.png" alt="Linkedin" style="width:30px; height:30px;"></a>
+
+			<a href="https://www.instagram.com/flyrannosaurusrex/?hl=en" target="_blank"><img src="assets/ig-icon.png" alt="Instagram" style="width:30px; height:30px;"></a>
+
+			<a href="mailto:reneepawaroo@gmail.com" target="_blank"><img src="assets/google-icon.png" alt="Gmail" style="width:30px; height:30px;"></a>
+		</div>
+		</div>
+	</footer>
+
+</body>
+</html>
