@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:700i');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
+body {
+	margin: 0;
+	box-sizing: border-box;
+}
+
+/*@media (max-width: 890px) and (min-width: 540px){
+		
+	}*/
+
+.row {
+	width: 100%;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+/*Header Styling*/
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	color: black;
+	background-color: #F5F5F5;
+	padding: 5px 20px;
+}
+
+.left-navigation {
+	width: 400px;
+	display: flex;
+}
+
+.logo {
+	padding-top: 10px;
+}
+
+.logo-text {
+	padding: 10px 0 10px 15px;
+	font-family: 'Raleway', sans-serif;
+	font-size: 21px;
+	font-weight: bold;
+}
+
+.right-navigation {
+	box-sizing: border-box;
+}
+
+.right-navigation nav {
+	display: flex;
+}
+
+.nav-link {
+	font-family: 'Roboto', sans-serif;
+	font-weight: bold;
+	padding: 24px 25px 0 0;
+	font-size: 13px;
+	text-transform: uppercase;
+	line-height: 10px;
+}
+
+.nav-link:last-child {
+	padding-right: 40px;
+}
+
+.nav-link:link, .nav-link:visited, .nav-link1:link, .nav-link1:visited {
+	color: black;
+	text-decoration: none;
+}
+
+.nav-link:hover, .nav-link1:hover {
+	color: #c1a3ff;
+}
+
+.nav-link:active, .nav-link1:active {
+	text-transform: underline solid #d1baff;
+}
+
+/*Hero Styling*/
+
+.slideshow-container {
+	height: 300px;
+	background-image: url(../assets/bowl.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+    background-position: center;
+}
+
+.overlay {
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	z-index: 1;
+	background-color: #00000066;
+}
+
+.centered-text {
+	text-align: center;
+	color: white;
+	font-family: 'Roboto', sans-serif;
+	font-stretch: extra-expanded;
+	padding-top: 130px;
+}
+
+/*Slideshow Styling*/
+
+/*.image {
+
+}
+
+.first-img {
+	background-image: url(../assets/egg.jpg)	
+}
+
+.second-img {
+	background-image: url(../assets/bowl.jpg)
+}
+
+.third-img {
+	background-image: url(../assets/sashimi.jpg)	
+}*/
+
+
+/*"Input boxes styling"*/
+
+.data-input {
+	display: flex;
+}
+
+.filters {
+	background-color: white;
+	border-right: 1px solid #F5F5F5;
+	width: 50%;
+	padding: 20px 40px;
+}
+
+.checkbox-col {
+	display: flex;
+}
+
+.checkbox-container {
+	display: block;
+}
+
+.container {
+	font-family: 'Raleway', sans-serif;
+}
+
+.checkmark {
+	background-color: black;
+}
+
+/*Ingredients Search*/
+
+.search {
+	background-color: white;
+	width: 50%;
+	padding: 20px 40px;
+	display: block;
+}
+
+.article-title {
+	font-family: 'Raleway', sans-serif;
+	font-size: 35px;
+	font-weight: bolder;
+	padding: 15px 0;
+}
+
+.article-regtext {
+	font-family: 'Raleway', sans-serif;
+	color: gray;
+}
+
+/*Search Fields*/
+.search-container {
+	display: block;
+}
+
+.search-box {
+	width: 100%; 
+	padding: 8px 20px;
+	margin-bottom: 5px;
+	border: none;
+	background-color: #F5F5F5;
+}
+
+.search-box:hover {
+	background-color: #f3edff;
+}
+
+input[type=text] {
+	color: black;
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+}
+
+.submit-button {
+	padding-top: 15px;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: black;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 17px;
+    padding: 16px 10px 20px 10px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+	background-color: #ccc;
+}
+
+/*Recipe header bar styling*/
+.recipe-header-bar {
+	background-color: #F5F5F5;
+	padding: 20px 40px 5px 40px;
+	border-top: 1px solid #ccc;
+}
+
+/*Cards styling*/
+
+.cards-section {
+	height: 500px;
+	overflow: scroll;
+	display: flex;
+	background-color: #F5F5F5;
+}
+
+.col {
+	/*border: .5px solid black;*/
+	height: 100%;
+	width: 25%;
+	padding: 20px 10px;
+}
+
+.col:first-child {
+	padding-left: 20px;
+}
+
+.col:last-child {
+	padding-right: 20px;
+}
+
+.card {
+	background-color: white;
+	height: 70%;
+	border: none;
+	z-index: 0;
+	box-shadow: 0 .5px .5px 0 rgba(0, 0, 0, 0.2), 0 4px 10px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card-overlay {
+/*	top:0;
+	bottom: 0;
+	left:0;
+	right: 0;
+	width:100%;
+	height:100%;
+	z-index: 1;
+	transition: .5s ease;
+	background-color: #00000066;*/
+}
+
+/*.card:hover {
+
+}*/
+
+.card img {
+	width: 100%;
+	height: 45%;
+	align-content: center;
+/*	background-image: 
+	background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+	box-sizing: border-box;*/
+}
+
+.card-title {
+	font-family: 'Raleway', sans-serif;
+	font-weight: bold;
+}
+
+.card-text {
+	font-family: 'Roboto', sans-serif;
+	font-size: 14px;
+}
+
+
+/*Footer styling*/
+
+.footer {
+	display: flex;
+	justify-content: space-between;
+	background-color: black;
+	color: white;
+	font-family: 'Roboto', sans-serif;
+	padding: 10px 20px;
+}
