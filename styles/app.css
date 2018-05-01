@@ -185,24 +185,18 @@ body {
 	margin-bottom: 5px;
 	border: none;
 	background-color: #F5F5F5;
+	color: black;
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
 }
 
 .search-box:hover {
 	background-color: #f3edff;
 }
 
-input[type=text] {
-	color: black;
-    font-family: 'Raleway', sans-serif;
-    font-size: 15px;
-}
-
-.submit-button {
+.search-button {
 	padding-top: 15px;
-}
-
-input[type=submit] {
-    width: 100%;
+	width: 100%;
     background-color: black;
     color: white;
     font-family: 'Roboto', sans-serif;
@@ -213,7 +207,7 @@ input[type=submit] {
     cursor: pointer;
 }
 
-input[type=submit]:hover {
+.search-button:hover {
 	background-color: #ccc;
 }
 

@@ -49,26 +49,27 @@
 			<div class="checkbox-col">
 				<div class="checkbox-container">
 				<p class="article-regtext">Do you eat...?</p>
+					<form class="js-search-form" name="search-form">
 					<label class="container js-checkbox">
-					  <input type="checkbox">
+					  <input type="checkbox" class="js-vegetarian" name="preferences">
 					  <span class="checkmark"></span>
 					  Vegetarian
 					</label>
 				
 					<label class="container js-checkbox">
-					  <input type="checkbox">
+					  <input type="checkbox" class="js-vegan" name="preferences">
 					  <span class="checkmark"></span>
 					  Vegan
 					</label>
 
 					<label class="container js-checkbox">
-					  <input type="checkbox">
+					  <input type="checkbox" class="js-pescatarian" name="preferences">
 					  <span class="checkmark"></span>
 					  Pescatarian
 					</label>
 
 					<label class="container js-checkbox">
-					  <input type="checkbox">
+					  <input type="checkbox" class="js-glutenFree" name="preferences">
 					  <span class="checkmark"></span>
 					  Gluten Free
 					</label>
@@ -76,23 +77,23 @@
 
 				<div class="checkbox-container">
 				<p class="article-regtext">Allergies?</p>
-					<label class="container js-checkbox">
-					  <input type="checkbox" checked="checked">
-					  <span class="checkmark"></span>
-					  Nuts
-					</label>
+						<label class="container js-checkbox">
+						  <input type="checkbox" class="js-nuts" name="allergies">
+						  <span class="checkmark"></span>
+						  Nuts
+						</label>
 
-					<label class="container js-checkbox">
-					  <input type="checkbox">
-					  <span class="checkmark"></span>
-					  Milk
-					</label>
+						<label class="container js-checkbox">
+						  <input type="checkbox" class="js-milk" name="allergies">
+						  <span class="checkmark"></span>
+						  Milk
+						</label>
 
-					<label class="container js-checkbox">
-					  <input type="checkbox">
-					  <span class="checkmark"></span>
-					  Shellfish
-					</label>
+						<label class="container js-checkbox">
+						  <input type="checkbox" class="js-shellfish" name="allergies">
+						  <span class="checkmark"></span>
+						  Shellfish
+						</label>
 				</div>
 			</div>
 		</article>
@@ -102,17 +103,18 @@
 			<h1 class="article-title">Ingredients</h1>
 			<p class="article-regtext">Put your top ingredient or ingredients in the boxes. We will find you some recipe inspiration!</p>
 				<div class="search-container">
-					<form class="search-form" name="search-form" onsubmit="return search()">
+					
+						<div>
+							<input class="search-box js-search" id="query" type="search" name="first-ingredient" placeholder="first ingredient" required>
+				
+							<!-- <input class="search-box js-search" id="query" type="text" name="second-ingredient" placeholder="second ingredient">
+						
+							<input class="search-box js-search" id="query" type="text" name="third-ingredient" placeholder="third ingredient"> -->
+						
+						 	<button class="search-button js-searchButton" type="submit" name="search-button">Sumbit</button>
 
-						<input class="search-box js-search" id="query" type="text" name="first-ingredient" placeholder="first ingredient" >
-			
-						<input class="search-box js-search" id="query" type="text" name="second-ingredient" placeholder="second ingredient">
-					
-						<input class="search-box js-search" id="query" type="text" name="third-ingredient" placeholder="third ingredient">
-					
-					<div class="submit-button js-sumbitButton">
-					 	<input type="submit" name="submit-button" value="Submit">
-  					</div>
+						 	<span class="validity"></span>
+  						</div>
   					</form>
 				</div>
 		</article>
@@ -122,12 +124,13 @@
 <!-- cards section -->
 
 <!-- <ul class="results"></ul> -->
-<ul class="js-results"></ul>
+
 <div class="buttons"></div>
 
 <!-- cards template -->
 	<section class="recipe-header-bar article-title">Recipes</section>
-	<section class="row cards-section">
+	<section class="row cards-section js-results">
+
 		<div class="col">
 			<div class="card">
 				<img src="assets/egg.jpg" alt="Recipe">
@@ -137,6 +140,7 @@
 				</div>
 			</div>
 		</div>
+
 		<div class="col">
 			<div class="card">
 				<img src="assets/salad.jpg" alt="Recipe">
@@ -184,24 +188,3 @@
 <script type="text/javascript" src="javascript/app.js"></script>
 </body>
 </html>
-
-
-
-
-<!-- filters availble on edamam -->
-<!-- <div id="search-filter-diet" class="filter-group lst-links">
-		<span class="lbl">Diet</span>
-			<ul>
-				<li class="itm"><label>Balanced</label>    <input type="checkbox" id="diet-balanced"     value="balanced"     name="diet">	</li>
-				<li class="itm"><label>Dairy-Free</label>  <input type="checkbox" id="diet-dairy-free"   value="dairy-free"   name="health"></li>
-				<li class="itm"><label>Gluten-Free</label> <input type="checkbox" id="diet-gluten-free"  value="gluten-free"  name="health"></li>
-				<li class="itm"><label>High-Fiber</label>  <input type="checkbox" id="diet-high-fiber"   value="high-fiber"   name="diet">	</li>
-				<li class="itm"><label>High-Protein</label><input type="checkbox" id="diet-high-protein" value="high-protein" name="diet">  </li>
-				<li class="itm"><label>Low-Carb</label>    <input type="checkbox" id="diet-low-carb"     value="low-carb"     name="diet">	</li>
-				<li class="itm"><label>Low-Fat</label>     <input type="checkbox" id="diet-low-fat"      value="low-fat"      name="diet">	</li>
-				<li class="itm"><label>Low-Sodium</label>  <input type="checkbox" id="diet-low-sodium"   value="low-sodium"   name="diet">	</li>
-				<li class="itm"><label>Low-Sugar</label>   <input type="checkbox" id="diet-low-sugar"    value="low-sugar"    name="health"></li>
-				<li class="itm"><label>Vegan</label>       <input type="checkbox" id="diet-vegan"        value="vegan"        name="health"></li>
-				<li class="itm"><label>Vegetarian</label>  <input type="checkbox" id="diet-vegetarian"   value="vegetarian"   name="health"></li>
-			</ul>
-		</search-filter-diet --> 
