@@ -81,7 +81,7 @@ body {
 /*Hero Styling*/
 
 .slideshow-container {
-	height: 300px;
+	height: 330px;
 	background-image: url(../assets/bowl.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -204,7 +204,7 @@ body {
 /*Cards styling*/
 
 .cards-section {
-	height: 575px;
+	height: 600px;
 	overflow: scroll;
 	
 	background-color: #F5F5F5;
