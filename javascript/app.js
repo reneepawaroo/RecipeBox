@@ -14,17 +14,22 @@ const APP_ID = "c15f679d";
 const APP_KEY = "2a62acb5a7780e9c7c4b6a7a3a70831d";
 
 
-const vegetarian = "&health=vegetarian";
-const vegan = "&health=vegan";
-const pescatarian = "&health=pescatarian";
-const glutenfree = "&health=gluten-free";
-const nutAllergy = ["&health=tree-nut-free", "&health=sesame-free", "&health=peanut-free"];
-const shellfishAllergy = ["&health=crustacean-free", "&health=shellfish-free"];
-const milkAllergy = "&health=dairy-free";
+const balancedFilter = ["&diet=balanced"]
+const filberFilter = ["&diet=high-fiber"]
+const proteinFilter = ["&diet=high-protein"]
+const carbFilter = ["&diet=low-carb"]
+const fatFilter = ["&diet=low-fat"]
+const sodiumFilter = ["&diet=low-sodium"]
 
+const vegetarianFilter = ["&health=vegetarian"];
+const veganFilter = ["&health=vegan"];
+const sugarFilter = ["&health=sugar-conscious"]
+const nutAllergy = ["&health=peanut-free", "&health=tree-nut-free"];
+//const pescatarianFilter = ["&health=pescatarian"];
+//const glutenfreeFilter = ["&health=gluten-free"];
+//const shellfishAllergy = ["&health=crustacean-free", "&health=shellfish-free"];
+//const milkAllergy = ["&health=dairy-free"];
 
-// const allergies = [shellfishAllergy, nutAllergy, milkAllergy];
-// const diets = ["vegan", "vegetarian", "pescatarian", "gluten-free"]
 
 
 console.log('fetching info...')
@@ -37,7 +42,7 @@ console.log(filters);
 	$('.buttons').html('');
 
 	//Get API function
-	const getAPICall = `${API_BASE}?&q=${searchQuery}app_id=${APP_ID}&app_key=${APP_KEY}${filters}`;
+	const getAPICall = `${API_BASE}?&q=${searchQuery}&app_id=${APP_ID}&app_key=${APP_KEY}${filters}&to=18`;
 	const $resultsContainer = $('.js-results')
 	
 	$.get(getAPICall, data => {
@@ -56,17 +61,19 @@ console.log(filters);
 		const receipeDietLabel = recipes[i].recipe.dietLabels;
 
 		console.log('recipes are=', recipeImage, recipeURL, recipeTitle);
-		$resultsContainer.append( 
-			'<div class="col"' +
-				'<div class="card">' + 
-					'<a href="'+recipeURL+'" target="_blank">' + '<img src="'+recipeImage+'">' +
-					'<div class="card-body">' +
-						'<h5 class="card-title">'+recipeTitle+'</h5>' +
-						'<p class="card-text">'+recipeSource+'</p>' +
-						'<p class="diet-label card-text">'+receipeDietLabel+'</p>' +
-					'</div>' +
-				'</div>' +
-			'</div>')
+		$resultsContainer.append(`
+	<div class="col">
+		<a href="${recipeURL}" class="card" target="_blank">
+			<img src="${recipeImage}" alt="Recipe">
+			<div class="card-body">
+				<h5 class="card-title">${recipeTitle}
+				</h5>
+				<p class="card-text">${recipeSource}</p>
+				<p class="diet-label card-text">${receipeDietLabel}</p>
+			</div>
+		</a>
+	</div>
+		`)
 	}
 });
 }
@@ -84,9 +91,11 @@ $searchForm.on ('submit', e => {
 
 $searchButton.on ('click', e => {
 
-	const $vegetarian = $('.js-nuts');
-	const $milk = $('.js-milk');
-	const $shellfish = $('.js-shellfish');
+	const $vegetarian = $('.js-vegetarian');
+	const $vegan = $('.js-vegan');
+	const $pescatarian = $('.js-pescatarian');
+	const $glutenfree = $('.js-glutenFree');
+
 	const $nuts = $('.js-nuts');
 	const $milk = $('.js-milk');
 	const $shellfish = $('.js-shellfish');
@@ -95,58 +104,28 @@ $searchButton.on ('click', e => {
 
 	console.log($nuts.checked);
 
+	if($vegetarian.is(':checked')) {
+		additionalArgs += vegetarianFilter.join("")
+	}
+	if($vegan.is(':checked')) {
+		additionalArgs += veganFilter.join("")
+	}
+	if($pescatarian.is(':checked')) {
+		additionalArgs += pescatarianFilter.join("")
+	}
+	if($glutenfree.is(':checked')) {
+		additionalArgs += glutenfreeFilter.join("")
+	}
 	if($nuts.is(':checked')) {
 		additionalArgs += nutAllergy.join("")
 	}
-	else if($milk.is(':checked')) {
+	if($milk.is(':checked')) {
 		additionalArgs += milkAllergy.join("")
 	}
-	else if($shellfish.is(':checked')) {
+	if($shellfish.is(':checked')) {
 		additionalArgs += shellfishAllergy.join("")
 	}
 
 	getRecipe($searchBar.val(), additionalArgs);
 });
-
-
-
-
-
-
-//Build OUTPUT
-
-//$resultsContainer.append(`<a href="${recipeURL}" target="_blank"><img src="${recipeImage}">`)
-
-// <div class="card">
-// 				<a href="recipeURL" target="_blank"<img src="recipeImage">
-// 				<div class="card-body">
-// 					<h5 class="card-title">recipeTitle</h5>
-// 					<p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-// 				</div>
-// 			</div>
-
-// function getOutput(recipes[i]) {
-
-// 	const recipeImage = recipes[i].recipe.image;
-// 	const recipeURL = recipes[i].recipe.url;
-// 	const recipeTitle = recipes[i].recipe.label;
-
-// 	//Build Output String
-
-// 	let output = `<a href="${recipeURL}" target="_blank"><img src="${recipeImage}">`;
-
-// };
-
-// CREATE card object
-
-// let card = new Object {
-// 	image: recipeImage,
-// 	url: recipeURL,
-// 	title: recipeTitle
-// };
-
-
-// CARD GENERATOR
-
-
 

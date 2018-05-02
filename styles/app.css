@@ -214,37 +214,39 @@ body {
 /*Recipe header bar styling*/
 .recipe-header-bar {
 	background-color: #F5F5F5;
-	padding: 20px 40px 5px 40px;
+	padding: 15px 40px 15px 40px;
 	border-top: 1px solid #ccc;
 }
 
 /*Cards styling*/
 
 .cards-section {
-	height: 550px;
+	height: 575px;
 	overflow: scroll;
 	display: flex;
 	background-color: #F5F5F5;
+	flex-wrap: wrap;
 }
 
 .col {
 	/*border: .5px solid black;*/
-	height: 100%;
-	width: 25%;
-	padding: 20px 10px;
+	height: 75%;
+	width: 20%;
+	/*flex-grow: 0;*/
+
 }
 
-.col:first-child {
+/*.col:first-child {
 	padding-left: 20px;
 }
 
 .col:last-child {
 	padding-right: 20px;
 }
-
+*/
 .card {
 	background-color: white;
-	height: 70%;
+	height: 80%;
 	border: none;
 	z-index: 0;
 	box-shadow: 0 .5px .5px 0 rgba(0, 0, 0, 0.2), 0 4px 10px 0 rgba(0, 0, 0, 0.2);
@@ -257,7 +259,7 @@ body {
 
 .card img {
 	width: 75%%;
-	height: 45%;
+	height: 50%;
 	align-content: center;
 /*	background-image: 
 	background-size: cover;
@@ -290,33 +292,6 @@ body {
 	font-size: 14px;
 	color: gray;
 }
-
-
-/*.nav-link {
-	font-family: 'Roboto', sans-serif;
-	font-weight: bold;
-	padding: 24px 25px 0 0;
-	font-size: 13px;
-	text-transform: uppercase;
-	line-height: 10px;
-}*/
-
-/*.nav-link:last-child {
-	padding-right: 40px;
-}
-
-.nav-link:link, .nav-link:visited, .nav-link1:link, .nav-link1:visited {
-	color: black;
-	text-decoration: none;
-}
-
-.nav-link:hover, .nav-link1:hover {
-	color: #c1a3ff;
-}
-
-.nav-link:active, .nav-link1:active {
-	text-transform: underline solid #d1baff;
-}*/
 
 /*Footer styling*/
 
