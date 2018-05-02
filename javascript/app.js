@@ -2,10 +2,10 @@
 // GAME PLAN
 // When a user inputs an ingredient, the Edamame API will be searched and ingredient cards will pop up
 
-// https://api.edamam.com/search?app_id=c15f679d&app_key=2a62acb5a7780e9c7c4b6a7a3a70831d&q=chicken
+// hhttps://api.edamam.com/search?q=chicken&app_id=c15f679d&app_key=2a62acb5a7780e9c7c4b6a7a3a70831d
 // open up in terminal "cd ~/Desktop/Final_Project && python -m SimpleHTTPServer 8000"
 
-// "&diet=" <-- filter
+// &health= <--filter
 // EXAMPLE - https://api.edamam.com/search?app_id=yourappid&app_key=yourappkey&q=butter&diet=low-carb&diet=high-protein
 
 //Variables for constructed API link
@@ -13,25 +13,31 @@ const API_BASE = "https://api.edamam.com/search";
 const APP_ID = "c15f679d";
 const APP_KEY = "2a62acb5a7780e9c7c4b6a7a3a70831d";
 
-const diets = ["vegan", "vegetarian", "pescatarian", "gluten-free"]
-const nutAllergy = ["tree-nut-free", "sesame-free", "peanut-free"]
-const shellfishAllergy = ["crustacean-free", "shellfish-free"];
-const milkAllergy = "dairy-free";
-const allergies = [shellfishAllergy, nutAllergy, milkAllergy];
 
-// &health=${healthQuery}
+const vegetarian = "&health=vegetarian";
+const vegan = "&health=vegan";
+const pescatarian = "&health=pescatarian";
+const glutenfree = "&health=gluten-free";
+const nutAllergy = ["&health=tree-nut-free", "&health=sesame-free", "&health=peanut-free"];
+const shellfishAllergy = ["&health=crustacean-free", "&health=shellfish-free"];
+const milkAllergy = "&health=dairy-free";
+
+
+// const allergies = [shellfishAllergy, nutAllergy, milkAllergy];
+// const diets = ["vegan", "vegetarian", "pescatarian", "gluten-free"]
+
 
 console.log('fetching info...')
 
 
-function getRecipe(searchQuery) {
-
+function getRecipe(searchQuery, filters) {
+console.log(filters);
 	//Clear results
 	$('.js-results').html('');
 	$('.buttons').html('');
 
 	//Get API function
-	const getAPICall = `${API_BASE}?app_id=${APP_ID}&app_key=${APP_KEY}&q=${searchQuery}`;
+	const getAPICall = `${API_BASE}?&q=${searchQuery}app_id=${APP_ID}&app_key=${APP_KEY}${filters}`;
 	const $resultsContainer = $('.js-results')
 	
 	$.get(getAPICall, data => {
@@ -67,40 +73,6 @@ function getRecipe(searchQuery) {
 
 //search input
 
-
-
-
-// function allergyIsChecked() {
-	
-
-// 	// if ($nuts === false && $milk === false && $shellfish === false) {
-// 	// 	return false;
-// 	// }
-// 	if ($nuts === true) {
-// 		console.log(trueeeeee);
-// 	}
-
-
-//}
-
-
-const $nuts = $('.js-nuts').checked;
-const $milk = $('.js-milk').checked;
-const $shellfish = $('.js-shellfish').checked;
-
-function checkForNutAllergy () {
-	$nuts.on ('change', e => {
-		if($nuts.checked) {
-			console.log('true');
-			return true;
-		}
-		else {
-			console.log('false');
-			return false;
-		}
-	});
-}
-
 const $searchBar = $('.js-search');
 const $searchButton = $('.js-searchButton');
 const $searchForm = $('.js-search-form');
@@ -111,12 +83,32 @@ $searchForm.on ('submit', e => {
 });
 
 $searchButton.on ('click', e => {
-	getRecipe($searchBar.val());
 
-		if (checkForNutAllergy === true) {
-			console.log('it works!');
-		}
+	const $vegetarian = $('.js-nuts');
+	const $milk = $('.js-milk');
+	const $shellfish = $('.js-shellfish');
+	const $nuts = $('.js-nuts');
+	const $milk = $('.js-milk');
+	const $shellfish = $('.js-shellfish');
+
+	let additionalArgs = '';
+
+	console.log($nuts.checked);
+
+	if($nuts.is(':checked')) {
+		additionalArgs += nutAllergy.join("")
+	}
+	else if($milk.is(':checked')) {
+		additionalArgs += milkAllergy.join("")
+	}
+	else if($shellfish.is(':checked')) {
+		additionalArgs += shellfishAllergy.join("")
+	}
+
+	getRecipe($searchBar.val(), additionalArgs);
 });
+
+
 
 
 
