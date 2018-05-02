@@ -10,10 +10,5 @@ https://projects.invisionapp.com/freehand/document/LVrQsZ0fm
 
 APIs:
 
-Spoonacular Food API: https://spoonacular.com/food-api
-
 Edamam API: https://developer.edamam.com/
 
-Pearson: http://developer.pearson.com/apis/pearson-kitchen-manager/
-
-Others: https://www.quora.com/Are-there-any-free-APIs-for-food-recipes
