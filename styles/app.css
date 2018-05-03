@@ -81,7 +81,7 @@ body {
 /*Hero Styling*/
 
 .slideshow-container {
-	height: 315px;
+	height: 345px;
 	background-image: url(../assets/bowl.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -197,7 +197,7 @@ body {
 /*Recipe header bar styling*/
 .recipe-header-bar {
 	background-color: #F5F5F5;
-	padding: 5px 20px 5px 35px;
+	padding: 7px 20px 5px 35px;
 	border-top: 1px solid #ccc;
 	width: 100%;
 }
@@ -206,7 +206,7 @@ body {
 /*Cards styling*/
 
 .cards-section {
-	height: 580px;
+	height: 600px;
 	overflow: scroll;
 	
 	background-color: #F5F5F5;
@@ -219,7 +219,7 @@ body {
 	/*border: .5px solid black;*/
 	display: flex;
 	width: 100%;
-	height: 450px;
+	height: 475px;
 	padding-bottom: 0;
 	margin: 0;
 }
