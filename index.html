@@ -3,7 +3,8 @@
 <head>
 	<title>Recipe Box</title>
 	<meta name="author" content="Renee Pawaroo">
-	<!-- <meta name="keywords" content="HTML,CSS,XML,JavaScript"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="styles/app.css">
 	<link rel="shortcut icon" href="assets/cube-black.png" type="image/x-icon"/>
@@ -49,7 +50,7 @@
 			<div class="checkbox-col">
 				<div class="checkbox-container">
 					<form class="js-search-form" name="search-form">
-						<label class="container js-checkbox">
+						<label class="container js-checkbox" >
 							<input type="checkbox" class="js-vegetarian" name="preferences">
 							<span class="checkmark"></span>
 							Vegetarian
@@ -78,8 +79,6 @@
 							<span class="checkmark"></span>
 							Low-Sodium
 						</label>
-
-						
 				</div>	
 
 				<div class="checkbox-container">
@@ -118,7 +117,7 @@
 
 
 		<article class="search">
-			<h1 class="article-title">Ingredient</h1>
+			<h1 class="article-title">Main Ingredient</h1>
 			<p class="article-regtext">Put your top ingredient in the box. We will find you some recipe inspiration!</p>
 				<div class="search-container">
 					
@@ -147,108 +146,108 @@
 
 	<section class="row cards-section js-results">
 
-	<div class="recipeRow">
-		<div class="col">
-			<a href="https://www.hellofresh.com/recipes/lasagna-baked-fusilli-5829bb804cdfb566da187592" target="_blank" class="card">
-				<img src="https://res.cloudinary.com/hellofresh/image/upload/f_auto,fl_lossy,q_80,w_auto:100:1280/v1/hellofresh_s3/image/lasagna-baked-fusilli-ea70e138.jpg" alt="Recipe" class="recipeImage">
-				<div class="card-body">
-					<h5 class="card-title">Lasagna-Baked Fusilli</h5>
-					<p class="card-text">Child friendly, Family Box, Nut free</p>
-				</div>
-			</a>
+		<div class="recipeRow">
+			<div class="col">
+				<a href="https://www.hellofresh.com/recipes/lasagna-baked-fusilli-5829bb804cdfb566da187592" target="_blank" class="card">
+					<img src="https://res.cloudinary.com/hellofresh/image/upload/f_auto,fl_lossy,q_80,w_auto:100:1280/v1/hellofresh_s3/image/lasagna-baked-fusilli-ea70e138.jpg" alt="Recipe" class="recipeImage">
+					<div class="card-body">
+						<h5 class="card-title">Lasagna-Baked Fusilli</h5>
+						<p class="card-text">Child friendly, Family Box, Nut free</p>
+					</div>
+				</a>
+			</div>
+
+			<div class="col">
+				<a href="https://www.chelseasmessyapron.com/the-best-bakery-style-pumpkin-chocolate-chip-cookies/" target="_blank" class="card">
+					<img src="https://www.chelseasmessyapron.com/wp-content/uploads/2016/09/The-BEST-Bakery-Style-Pumpkin-Chocolate-Chip-Cookies-from-chelseasmessyapron.com_.jpg" alt="Recipe" class="recipeImage">
+					<div class="card-body">
+						<h5 class="card-title">The Best Bakery-Style Pumpking Chocolate-Chip Cookies</h5>
+						<p class="card-text">Super big and chewy</p>
+					</div>
+				</a>
+			</div>
+
+			<div class="col">
+				<a href="https://food52.com/recipes/68405-harissa-chicken-with-leeks-potatoes-and-yogurt?utm_source=cj&affil=cj&utm_medium=affiliate&utm_campaign=Food52+Shop&company=Skimlinks&website=7682639" target="_blank" class="card">
+					<img src="https://images.food52.com/zpDAR9ZX__A8X4-a8x01dGARedY=/753x502/eaae0487-bf4e-456b-b213-89538b830c0d--Screen_Shot_2017-02-23_at_12.45.35_PM.png" alt="Recipe" class="recipeImage">
+					<div class="card-body">
+						<h5 class="card-title">Harissa Chicken with Leeks, Potatoes, and Yogurt</h5>
+						<p class="card-text">Food 52</p>
+					</div>
+				</a>
+			</div>
+
+			<div class="col">
+				<a href="https://www.bonappetit.com/recipe/coconut-rice-tofu-kale-salad" target="_blank" class="card">
+					<img src="https://assets.bonappetit.com/photos/57adbd80f1c801a1038bcbe4/1:1/w_1536,h_1536,c_limit/LUNCH-0115.jpg" alt="Recipe" class="recipeImage">
+					<div class="card-body">
+						<h5 class="card-title">Coconut Rice, Tofu, and Kale Salad</h5>
+						<p class="card-text">bon appetit</p>
+					</div>
+				</a>
+			</div>
+			<div class="col">
+				<a href="https://sallysbakingaddiction.com/2013/05/08/easy-cinnamon-rolls-from-scratch/" target="_blank" class="card">
+					<img src="https://sallysbakingaddiction.com/wp-content/uploads/2013/05/easy-cinnamon-rolls-recipe-1.jpg" alt="Recipe" class="recipeImage">
+					<div class="card-body">
+						<h5 class="card-title" style="font-size:1.5vw";>Easy Cinnamon Rolls</h5>
+						<p class="card-text">Sally's Baking Addiction</p>
+					</div>
+				</a>
+			</div>
 		</div>
 
-		<div class="col">
-			<a href="https://www.chelseasmessyapron.com/the-best-bakery-style-pumpkin-chocolate-chip-cookies/" target="_blank" class="card">
-				<img src="https://www.chelseasmessyapron.com/wp-content/uploads/2016/09/The-BEST-Bakery-Style-Pumpkin-Chocolate-Chip-Cookies-from-chelseasmessyapron.com_.jpg" alt="Recipe" class="recipeImage">
-				<div class="card-body">
-					<h5 class="card-title">The Best Bakery-Style Pumpking Chocolate-Chip Cookies</h5>
-					<p class="card-text">Super big and chewy</p>
-				</div>
-			</a>
-		</div>
+		<div class="recipeRow">
+			<div class="col">
+				<a href="http://cakeandwhisky.com/2017/09/26/squash-soup/" target="_blank" class="card">
+					<img src="http://cakeandwhisky.com/wp-content/uploads/2017/09/Squash-soup-5.jpg" alt="Recipe" class="recipeImage">
+					<div class="card-body">
+						<h5 class="card-title">Crown Prince Squash Soup</h5>
+						<p class="card-text">Vegan</p>
+					</div>
+				</a>
+			</div>
 
-		<div class="col">
-			<a href="https://food52.com/recipes/68405-harissa-chicken-with-leeks-potatoes-and-yogurt?utm_source=cj&affil=cj&utm_medium=affiliate&utm_campaign=Food52+Shop&company=Skimlinks&website=7682639" target="_blank" class="card">
-				<img src="https://images.food52.com/zpDAR9ZX__A8X4-a8x01dGARedY=/753x502/eaae0487-bf4e-456b-b213-89538b830c0d--Screen_Shot_2017-02-23_at_12.45.35_PM.png" alt="Recipe" class="recipeImage">
-				<div class="card-body">
-					<h5 class="card-title">Harissa Chicken with Leeks, Potatoes, and Yogurt</h5>
-					<p class="card-text">Food 52</p>
-				</div>
-			</a>
-		</div>
+			<div class="col">
+				<a href="https://sallysbakingaddiction.com/2015/07/08/skillet-chicken-with-creamy-cilantro-lime-sauce/" target="_blank" class="card">
+					<img src="https://sallysbakingaddiction.com/wp-content/uploads/2015/07/Skillet-Chicken-with-Creamy-Cilantro-Lime-Sauce-2.jpg" alt="Recipe" class="recipeImage">
+					<div class="card-body">
+						<h5 class="card-title">Skillet Chicken with Creamy Cilantro Lime Sauce</h5>
+						<p class="card-text">Healthy</p>
+					</div>
+				</a>
+			</div>
 
-		<div class="col">
-			<a href="https://www.bonappetit.com/recipe/coconut-rice-tofu-kale-salad" target="_blank" class="card">
-				<img src="https://assets.bonappetit.com/photos/57adbd80f1c801a1038bcbe4/1:1/w_1536,h_1536,c_limit/LUNCH-0115.jpg" alt="Recipe" class="recipeImage">
-				<div class="card-body">
-					<h5 class="card-title">Coconut Rice, Tofu, and Kale Salad</h5>
-					<p class="card-text">bon appetit</p>
-				</div>
-			</a>
-		</div>
-		<div class="col">
-			<a href="https://sallysbakingaddiction.com/2013/05/08/easy-cinnamon-rolls-from-scratch/" target="_blank" class="card">
-				<img src="https://sallysbakingaddiction.com/wp-content/uploads/2013/05/easy-cinnamon-rolls-recipe-1.jpg" alt="Recipe" class="recipeImage">
-				<div class="card-body">
-					<h5 class="card-title">Easy Cinnamon Rolls</h5>
-					<p class="card-text">Sally's Baking Addiction</p>
-				</div>
-			</a>
-		</div>
-	</div>
+			<div class="col">
+				<a href="https://www.jocooks.com/recipes/creamy-avocado-spinach-pasta/" target="_blank" class="card">
+					<img src="https://www.jocooks.com/wp-content/uploads/2015/01/avocado-and-spinach-pasta.jpg" alt="Recipe" class="recipeImage">
+					<div class="card-body">
+						<h5 class="card-title">Creamy Avocado and Spinach Pasta</h5>
+						<p class="card-text">Healthy</p>
+					</div>
+				</a>
+			</div>
 
-	<div class="recipeRow">
-		<div class="col">
-			<a href="http://cakeandwhisky.com/2017/09/26/squash-soup/" target="_blank" class="card">
-				<img src="http://cakeandwhisky.com/wp-content/uploads/2017/09/Squash-soup-5.jpg" alt="Recipe" class="recipeImage">
-				<div class="card-body">
-					<h5 class="card-title">Crown Prince Squash Soup</h5>
-					<p class="card-text">Vegan</p>
-				</div>
-			</a>
-		</div>
+			<div class="col">
+				<a href="https://www.delish.com/cooking/recipe-ideas/recipes/a57880/kung-pao-brussels-sprouts-recipe/" target="_blank" class="card">
+					<img src="https://hips.hearstapps.com/del.h-cdn.co/assets/18/05/640x959/gallery-1517252475-delish-kung-poa-brussels-sprouts-pinterest-still001.jpg?resize=768:*" alt="Recipe" class="recipeImage">
+					<div class="card-body">
+						<h5 class="card-title">Kung Pao Brussels Sprouts</h5>
+						<p class="card-text">Salty, spicy, and addicting</p>
+					</div>
+				</a>
+			</div>
 
-		<div class="col">
-			<a href="https://sallysbakingaddiction.com/2015/07/08/skillet-chicken-with-creamy-cilantro-lime-sauce/" target="_blank" class="card">
-				<img src="https://sallysbakingaddiction.com/wp-content/uploads/2015/07/Skillet-Chicken-with-Creamy-Cilantro-Lime-Sauce-2.jpg" alt="Recipe" class="recipeImage">
-				<div class="card-body">
-					<h5 class="card-title">Skillet Chicken with Creamy Cilantro Lime Sauce</h5>
-					<p class="card-text">Healthy</p>
-				</div>
-			</a>
+			<div class="col">
+				<a href="http://www.pepperdelight.com/chocolate-hazelnut-semi-naked-cake-with-dark-chocolate-ganache/" target="_blank" class="card">
+					<img src="https://i0.wp.com/www.pepperdelight.com/wp-content/uploads/2017/01/pepper-delight-chocolate-hazelnut-cake-1.jpg?w=1201" alt="Recipe" class="recipeImage">
+					<div class="card-body">
+						<h5 class="card-title">Chocolate Hazelnut Cake With Dark Chocolate Ganache</h5>
+						<p class="card-text"></p>
+					</div>
+				</a>
+			</div> 
 		</div>
-
-		<div class="col">
-			<a href="https://www.jocooks.com/recipes/creamy-avocado-spinach-pasta/" target="_blank" class="card">
-				<img src="https://www.jocooks.com/wp-content/uploads/2015/01/avocado-and-spinach-pasta.jpg" alt="Recipe" class="recipeImage">
-				<div class="card-body">
-					<h5 class="card-title">Creamy Avocado and Spinach Pasta</h5>
-					<p class="card-text">Healthy</p>
-				</div>
-			</a>
-		</div>
-
-		<div class="col">
-			<a href="https://www.delish.com/cooking/recipe-ideas/recipes/a57880/kung-pao-brussels-sprouts-recipe/" target="_blank" class="card">
-				<img src="https://hips.hearstapps.com/del.h-cdn.co/assets/18/05/640x959/gallery-1517252475-delish-kung-poa-brussels-sprouts-pinterest-still001.jpg?resize=768:*" alt="Recipe" class="recipeImage">
-				<div class="card-body">
-					<h5 class="card-title">Kung Pao Brussels Sprouts</h5>
-					<p class="card-text">Salty, spicy, and addicting</p>
-				</div>
-			</a>
-		</div>
-
-		<div class="col">
-			<a href="http://www.pepperdelight.com/chocolate-hazelnut-semi-naked-cake-with-dark-chocolate-ganache/" target="_blank" class="card">
-				<img src="https://i0.wp.com/www.pepperdelight.com/wp-content/uploads/2017/01/pepper-delight-chocolate-hazelnut-cake-1.jpg?w=1201" alt="Recipe" class="recipeImage">
-				<div class="card-body">
-					<h5 class="card-title">Chocolate Hazelnut Cake With Dark Chocolate Ganache</h5>
-					<p class="card-text"></p>
-				</div>
-			</a>
-		</div> 
-	</div>
 	</section>
 
 

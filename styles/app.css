@@ -81,7 +81,7 @@ body {
 /*Hero Styling*/
 
 .slideshow-container {
-	height: 330px;
+	height: 315px;
 	background-image: url(../assets/bowl.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -197,18 +197,20 @@ body {
 /*Recipe header bar styling*/
 .recipe-header-bar {
 	background-color: #F5F5F5;
-	padding: 10px 20px 10px 20px;
+	padding: 5px 20px 5px 35px;
 	border-top: 1px solid #ccc;
+	width: 100%;
 }
+
 
 /*Cards styling*/
 
 .cards-section {
-	height: 600px;
+	height: 580px;
 	overflow: scroll;
 	
 	background-color: #F5F5F5;
-	flex-wrap: wrap;
+	/*flex-wrap: wrap;*/
 
 	display: flex;
 }
@@ -229,8 +231,7 @@ body {
 	padding-top: 20px;
 	padding-bottom: 0;
 	margin-bottom: 0;
-	/*flex-grow: 0;
-*/
+	/*flex-grow: 0;*/
 }
 
 .card {
@@ -271,6 +272,11 @@ body {
 	text-decoration: none;
 }
 
+.card:hover .col link{
+	color: #c1a3ff;
+	text-decoration: none;
+}
+
 .card:hover .card-title{
 	color: #c1a3ff;
 	text-decoration: none;
@@ -289,10 +295,70 @@ body {
 /*Footer styling*/
 
 .footer {
+	width: 100%;
 	display: flex;
 	justify-content: space-between;
 	background-color: black;
 	color: white;
 	font-family: 'Roboto', sans-serif;
 	padding: 10px 20px;
+}
+
+
+@media screen and (max-width:650px) {
+	.body {
+		display: block;
+	}
+	.slideshow-container {
+		height: 115px;
+	}	
+	.centered-text {
+		padding-top: 40px;
+		font-size: 20px;
+	}
+	.filters, .search {
+		width: 100%;
+		height: 110px;
+		padding: 5px 20px;
+	}
+	.article-title {
+		font-size: 20px;
+		padding: 5px
+
+	}
+	.article-regtext {
+		font-size: 12px;
+		padding-top: 0;
+	}
+	.checkbox-col{
+		font-size: 12px;
+		overflow: scroll;
+	}
+	.search {
+		padding-top: 15px;
+	}
+	.search-box {
+		margin: 0; 
+		padding-bottom: 5px 2px;
+		width: 68%;
+	}
+	.search-button {
+		padding: 5px 2px;
+		width: 30%;
+		margin: 0;
+	}
+	.search-container {
+		display: inline-flex;
+	}
+	.recipe-header-bar {
+		padding-left: 20px;
+	}
+	.recipeRow {
+		display: block;
+		height: 80%;
+	}
+	.col {
+		width: 100%;
+		height: 100%;
+	}
 }

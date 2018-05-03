@@ -14,24 +14,6 @@ const APP_ID = "c15f679d";
 const APP_KEY = "2a62acb5a7780e9c7c4b6a7a3a70831d";
 
 
-const balancedFilter = ["&diet=balanced"]
-const filberFilter = ["&diet=high-fiber"]
-const proteinFilter = ["&diet=high-protein"]
-const carbFilter = ["&diet=low-carb"]
-const fatFilter = ["&diet=low-fat"]
-const sodiumFilter = ["&diet=low-sodium"]
-
-const vegetarianFilter = ["&health=vegetarian"];
-const veganFilter = ["&health=vegan"];
-const sugarFilter = ["&health=sugar-conscious"]
-const nutAllergy = ["&health=peanut-free", "&health=tree-nut-free"];
-//const pescatarianFilter = ["&health=pescatarian"];
-//const glutenfreeFilter = ["&health=gluten-free"];
-//const shellfishAllergy = ["&health=crustacean-free", "&health=shellfish-free"];
-//const milkAllergy = ["&health=dairy-free"];
-
-
-
 console.log('fetching info...')
 
 
@@ -42,7 +24,7 @@ console.log(filters);
 	$('.buttons').html('');
 
 	//Get API function
-	const getAPICall = `${API_BASE}?&q=${searchQuery}&app_id=${APP_ID}&app_key=${APP_KEY}${filters}&to=18`;
+	const getAPICall = `${API_BASE}?&q=${searchQuery}&app_id=${APP_ID}&app_key=${APP_KEY}${filters}&to=15`;
 	const $resultsContainer = $('.js-results')
 	
 	$.get(getAPICall, data => {
@@ -61,10 +43,10 @@ console.log(filters);
 		const receipeDietLabel = recipes[i].recipe.dietLabels;
 
 		console.log('recipes are=', recipeImage, recipeURL, recipeTitle);
-		$resultsContainer.append(`
+		$resultsContainer.append(` 
 	<div class="col">
 		<a href="${recipeURL}" class="card" target="_blank">
-			<img src="${recipeImage}" alt="Recipe">
+			<img src="${recipeImage}" alt="Recipe" class="recipeImage">
 			<div class="card-body">
 				<h5 class="card-title">${recipeTitle}
 				</h5>
@@ -79,6 +61,25 @@ console.log(filters);
 }
 
 //search input
+
+
+const vegetarianFilter = ["&health=vegetarian"];
+const veganFilter = ["&health=vegan"];
+const balancedFilter = ["&diet=balanced"]
+const sugarFilter = ["&health=sugar-conscious"]
+const sodiumFilter = ["&diet=low-sodium"]
+
+const carbFilter = ["&diet=low-carb"]
+const fatFilter = ["&diet=low-fat"]
+const filberFilter = ["&diet=high-fiber"]
+const proteinFilter = ["&diet=high-protein"]
+
+
+const nutAllergy = ["&health=peanut-free", "&health=tree-nut-free"];
+//const pescatarianFilter = ["&health=pescatarian"];
+//const glutenfreeFilter = ["&health=gluten-free"];
+//const shellfishAllergy = ["&health=crustacean-free", "&health=shellfish-free"];
+//const milkAllergy = ["&health=dairy-free"];
 
 const $searchBar = $('.js-search');
 const $searchButton = $('.js-searchButton');
